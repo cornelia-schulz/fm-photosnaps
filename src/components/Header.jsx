@@ -25,7 +25,7 @@ function Header() {
   return (
     <header className="header">
       <nav className="mobile-header">
-        <img src={logo} alt="Logo" className="logo" />
+        <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
         <label htmlFor="menu-toggle">
           <img className="toggle" src={menuImg} alt="Menu toggle" />
         </label>
