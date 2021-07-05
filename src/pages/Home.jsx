@@ -13,7 +13,7 @@ import designedDesktopImg from '../assets/home/desktop/designed-for-everyone.jpg
 
 function Home() {
 
-  const[cards, setCards] = useState([
+  const[cards] = useState([
     {
       intro: "CREATE AND SHARE YOUR PHOTO STORIES",
       text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
