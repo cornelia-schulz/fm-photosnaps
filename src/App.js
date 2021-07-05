@@ -1,6 +1,5 @@
-import './reset.css'
-import './App.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import { Switch, Route } from 'react-router-dom'
 import Features from './pages/Features'
 import Home from './pages/Home'
 import Pricing from './pages/Pricing'
