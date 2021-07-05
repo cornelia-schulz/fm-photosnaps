@@ -41,7 +41,7 @@ function Header() {
             <Link className="menu-link" to="/pricing">PRICING</Link>
           </li>
           <li className="menu-button">
-            <button className="button">GET AN INVITE</button>
+            <button className="button button-dark">GET AN INVITE</button>
           </li>
         </ul>
       </nav>

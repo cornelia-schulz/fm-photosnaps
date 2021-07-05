@@ -27,14 +27,56 @@ h4 {
 }
 
 .button {
-    background-color: $black;
-    color: $white;
+    border: none;
     font-weight: 700;
     height: 4.8rem;
     letter-spacing: 0.25rem;
     line-height: 2rem;
     text-align: center;
     width: 31.1rem;
+}
+
+.button-dark {
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+        background-color: $light-grey;
+        color: $black;
+    }
+}
+
+.button-no-border {
+    background-color: transparent;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.562rem;
+    text-align: left;
+
+    &:after {
+        content: url('../assets/shared/desktop/arrow.svg');
+        padding-left: 1.8rem;
+        vertical-align: middle;
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.button-no-border-light {
+    &:after {
+        content: url('../assets/shared/desktop/arrow-light.svg');
+    }
+
+    a {
+        color: $white;
+    }
 }
 
 .header {
@@ -74,7 +116,7 @@ label {
     max-height: 0;
     min-width: 100%;
     overflow: hidden;
-    margin: 2.5rem auto 0;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
     transition: all 0.3s ease;
@@ -96,11 +138,34 @@ label {
         padding-top: 2rem;
     }
 }
+
+.menu-items {
+    margin: 1rem 0;
+
+    &:first-child {
+      margin-top: 2.5rem;
+    }
+}
   
 #menu-toggle:checked + #menu {
     max-height: 100%;
 }
 
-.menu-items {
-    margin: 1rem 0;
+.story-card-dark {
+    background-color: $black;
+    color: $white;
+}
+
+.story-card-content {
+    padding: 7.2rem 2.4rem 7.2rem 3.3rem;
+}
+
+.story-card-content-intro {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 1.6rem;
+}
+
+.story-card-content-text {
+    margin-bottom: 2.3rem;
 }
