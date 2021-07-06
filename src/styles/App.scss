@@ -175,14 +175,36 @@ label {
     }
 }
 
+.story-card-content-tagline {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.562rem;
+    margin-bottom: 1.6rem;
+}
+
 .story-card-content-intro {
     font-size: 3.2rem;
     line-height: 4rem;
     margin-bottom: 1.6rem;
 }
 
+.story-card-content-date-author {
+    font-size: 1.3rem;
+    line-height: 1.693rem;
+    margin-bottom: 2.4rem;
+}
+
+.story-card-content-date {
+    opacity: 0.75;
+}
+
+.story-card-content-author {
+    margin-left: 1rem;
+}
+
 .story-card-content-text {
     margin-bottom: 2.3rem;
+    opacity: 0.6 ;
 }
 
 .photo-card {
@@ -213,13 +235,19 @@ label {
     z-index: 4;
 }
 
+.photo-card-date,
 .photo-card-author {
-    border-bottom: 0.1rem solid rgba($color: $white, $alpha: 0.3);
     font-size: 1.3rem;
     line-height: 1.693rem;
+    margin-bottom: 0.4rem;
     margin-top: 0.4rem;
-    padding-bottom: 1.6rem;
+    opacity: 0.9;
     width: 80%;
+}
+
+.photo-card-author {
+    border-bottom: 0.1rem solid rgba($color: $white, $alpha: 0.3);
+    padding-bottom: 1.6rem;
 }
 
 .photo-card + .info-card {

@@ -27,7 +27,7 @@ import embed from '../assets/features/desktop/embed.svg'
 
 function Home() {
 
-  const[storyCards] = useState([
+  const [storyCards] = useState([
     {
       intro: "CREATE AND SHARE YOUR PHOTO STORIES",
       text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
@@ -115,14 +115,14 @@ function Home() {
     return (
       <div className="home">
         <Header />
-        {storyCards.map((storyCard) => 
-          <StoryCard card={storyCard} />
+        {storyCards.map((storyCard, index) => 
+          <StoryCard card={storyCard} key={index} />
         )}
-        {photoCards.map((photoCard) => 
-          <PhotoCard photoCard={photoCard} />
+        {photoCards.map((photoCard, index) => 
+          <PhotoCard photoCard={photoCard} key={index} />
         )}
-        {infoCards.map((infoCard) => 
-          <InfoCard infoCard={infoCard} />
+        {infoCards.map((infoCard, index) => 
+          <InfoCard infoCard={infoCard} key={index} />
         )}
         <Footer />
       </div>
