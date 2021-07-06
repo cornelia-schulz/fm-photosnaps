@@ -221,6 +221,10 @@ label {
     width: 80%;
 }
 
+.photo-card + .info-card {
+    margin-top: 8rem;
+}
+
 .info-card {
     margin: 5.6rem 3.3rem;
     text-align: center;
