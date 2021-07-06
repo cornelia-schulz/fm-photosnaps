@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from '../components/Header'
 import StoryCard from '../components/StoryCard'
 import PhotoCard from '../components/PhotoCard'
+import InfoCard from '../components/InfoCard'
 import createMobileImg from '../assets/home/mobile/create-and-share.jpg'
 import createTabletImg from '../assets/home/tablet/create-and-share.jpg'
 import createDesktopImg from '../assets/home/desktop/create-and-share.jpg'
@@ -19,6 +20,9 @@ import voyageMobileImg from '../assets/stories/mobile/18-days-voyage.jpg'
 import voyageDesktopImg from '../assets/stories/desktop/18-days-voyage.jpg'
 import architecturalsMobileImg from '../assets/stories/mobile/architecturals.jpg'
 import architecturalsDesktopImg from '../assets/stories/desktop/architecturals.jpg'
+import responsive from '../assets/features/desktop/responsive.svg'
+import noLimit from '../assets/features/desktop/no-limit.svg'
+import embed from '../assets/features/desktop/embed.svg'
 
 function Home() {
 
@@ -88,6 +92,23 @@ function Home() {
       buttonText: "READ STORY"
     }
   ])
+  const [infoCards] = useState([
+    {
+      image: responsive,
+      title: "100% Responsive",
+      text: "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen."
+    },
+    {
+      image: noLimit,
+      title: "No Photo Upload Limit",
+      text: "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+    },
+    {
+      image: embed,
+      title: "Available to Embed",
+      text: "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. "
+    }
+  ])
 
 
     return (
@@ -98,6 +119,9 @@ function Home() {
         )}
         {photoCards.map((photoCard) => 
           <PhotoCard photoCard={photoCard} />
+        )}
+        {infoCards.map((infoCard) => 
+          <InfoCard infoCard={infoCard} />
         )}
       </div>
     );
