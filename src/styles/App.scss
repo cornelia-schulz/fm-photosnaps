@@ -175,6 +175,10 @@ label {
     }
 }
 
+.story-card-img {
+    width: 100%;
+}
+
 .story-card-content-tagline {
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
@@ -299,4 +303,38 @@ label {
     line-height: 1.9rem;
     margin-top: 3.4rem;
     opacity: 0.5;
+}
+
+.beta {
+    position: relative;
+}
+
+.beta-img {
+    display: block;
+    min-height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+}
+
+.beta-content {
+    bottom: 5.6rem;
+    color: $white;
+    left: 3.3rem;
+    position: absolute;
+    top: 5.6rem;
+}
+
+.beta-tagline {
+    font-size: 3.2rem;
+    letter-spacing: 0.33rem;
+    line-height: 4rem;
+}
+
+.highlight-beta {
+    height: 0.6rem;
+    background-image: linear-gradient(to bottom left, $main-accent-1, $main-accent-2, $main-accent-3);
+    left: 3.3rem;
+    position: absolute;
+    top: 0;
+    width: 12.8rem;
 }

@@ -9,11 +9,12 @@ function StoryCard({card}) {
           srcSet={`${card.imageMobile} 375w,
                    ${card.imageTablet} 273w,
                    ${card.imageDesktop} 830w`}
-          sizes="(max-width: 600px) 400px,
-                (max-width: 768px) 300px,
-                800px"
+          sizes="(max-width 600px) 375px,
+                (max-width 768px) 273px,
+                830px"
           src={card.mobileImg}
           alt="create and share"
+          loading="lazy"
         />
         <div className="story-card-content">
           {card.tagline &&
@@ -32,9 +33,11 @@ function StoryCard({card}) {
             </p>
           }
           <p className="story-card-content-text">{card.text}</p>
-          <button className={"button button-no-border " + (card.darkMode ? 'button-no-border-light' : '')}>
-            <Link to={card.buttonLink}>{card.buttonText}</Link>
-          </button>
+          {card.buttonText &&
+            <button className={"button button-no-border " + (card.darkMode ? 'button-no-border-light' : '')}>
+              <Link to={card.buttonLink}>{card.buttonText}</Link>
+            </button>
+          }
         </div>
       </div>
   )

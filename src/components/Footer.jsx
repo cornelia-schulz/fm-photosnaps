@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import  Logo from '../components/Logo'
-import Facebook from '../components/Facebook'
-import Youtube from '../components/Youtube'
-import Twitter from '../components/Twitter'
-import Pinterest from '../components/Pinterest'
-import Instagram from '../components/Instagram'
+import  Logo from './svg/Logo'
+import Facebook from './svg/Facebook'
+import Youtube from './svg/Youtube'
+import Twitter from './svg/Twitter'
+import Pinterest from './svg/Pinterest'
+import Instagram from './svg/Instagram'
 
 function Footer() {
     return (

@@ -7,10 +7,11 @@ function PhotoCard({photoCard}) {
                 className="photo-card-img"
                 srcSet={`${photoCard.mobileImage} 375w,
                          ${photoCard.desktopImage} 360w`}
-                sizes="(max-width: 768px) 375px,
+                sizes="(max-width 768px) 375px,
                         360px"
                 src={photoCard.mobileImage}
                 alt="story"
+                loading="lazy"
             />
             <div className="gradient" />
             <div className="photo-card-description">
