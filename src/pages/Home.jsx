@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import StoryCard from '../components/StoryCard'
 import PhotoCard from '../components/PhotoCard'
 import InfoCard from '../components/InfoCard'
+import Footer from '../components/Footer'
 import createMobileImg from '../assets/home/mobile/create-and-share.jpg'
 import createTabletImg from '../assets/home/tablet/create-and-share.jpg'
 import createDesktopImg from '../assets/home/desktop/create-and-share.jpg'
@@ -123,6 +124,7 @@ function Home() {
         {infoCards.map((infoCard) => 
           <InfoCard infoCard={infoCard} />
         )}
+        <Footer />
       </div>
     );
   }

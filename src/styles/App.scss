@@ -52,6 +52,7 @@ h4 {
     letter-spacing: 0.2rem;
     line-height: 1.562rem;
     text-align: left;
+    width: auto;
 
     &:after {
         content: url('../assets/shared/desktop/arrow.svg');
@@ -233,4 +234,41 @@ label {
         margin-bottom: 1.6rem;
         margin-top: 4.8rem;
     }
+}
+
+.footer {
+    background-color: $black;
+    color: $white;
+    padding: 5.6rem 3.3rem;
+    text-align: center;
+}
+
+.social-media-icons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 3.2rem auto 4.9rem auto;
+    max-width: 15.2rem;
+}
+
+.site-links-list {
+    margin-bottom: 11.9rem;
+}
+
+.site-links {
+    list-style-type: none;
+    margin-bottom: 1.9rem;
+
+    a {
+        color: $white;
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.562rem;
+        text-decoration: none;
+    }
+}
+
+.copyright {
+    line-height: 1.9rem;
+    margin-top: 3.4rem;
+    opacity: 0.5;
 }
