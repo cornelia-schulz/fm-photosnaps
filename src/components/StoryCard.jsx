@@ -14,8 +14,9 @@ function StoryCard({card}) {
                 800px"
           src={card.mobileImg}
           alt="create and share"
-        />        
+        />
         <div className="story-card-content">
+          <div className={"highlight " + (card.darkMode ? 'show' : 'hide')} />
           <p className="story-card-content-intro">{card.intro}</p>
           <p className="story-card-content-text">{card.text}</p>
           <button className={"button button-no-border " + (card.darkMode ? 'button-no-border-light' : '')}>

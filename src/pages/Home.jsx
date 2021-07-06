@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from '../components/Header'
 import StoryCard from '../components/StoryCard'
+import PhotoCard from '../components/PhotoCard'
 import createMobileImg from '../assets/home/mobile/create-and-share.jpg'
 import createTabletImg from '../assets/home/tablet/create-and-share.jpg'
 import createDesktopImg from '../assets/home/desktop/create-and-share.jpg'
@@ -10,10 +11,18 @@ import beautifulDesktopImg from '../assets/home/desktop/beautiful-stories.jpg'
 import designedMobileImg from '../assets/home/mobile/designed-for-everyone.jpg'
 import designedTabletImg from '../assets/home/tablet/designed-for-everyone.jpg'
 import designedDesktopImg from '../assets/home/desktop/designed-for-everyone.jpg'
+import mountainsMobileImg from '../assets/stories/mobile/mountains.jpg'
+import mountainsDesktopImg from '../assets/stories/desktop/mountains.jpg'
+import cityscapesMobileImg from '../assets/stories/mobile/cityscapes.jpg'
+import cityscapesDesktopImg from '../assets/stories/desktop/cityscapes.jpg'
+import voyageMobileImg from '../assets/stories/mobile/18-days-voyage.jpg'
+import voyageDesktopImg from '../assets/stories/desktop/18-days-voyage.jpg'
+import architecturalsMobileImg from '../assets/stories/mobile/architecturals.jpg'
+import architecturalsDesktopImg from '../assets/stories/desktop/architecturals.jpg'
 
 function Home() {
 
-  const[cards] = useState([
+  const[storyCards] = useState([
     {
       intro: "CREATE AND SHARE YOUR PHOTO STORIES",
       text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
@@ -45,13 +54,50 @@ function Home() {
       darkMode: false
     }
   ])
+  const [photoCards] = useState([
+    {
+      mobileImage: mountainsMobileImg,
+      desktopImage: mountainsDesktopImg,
+      title: "The Mountains",
+      author: "John Appleseed",
+      buttonLink: "/stories",
+      buttonText: "READ STORY"
+    },
+    {
+      mobileImage: cityscapesMobileImg,
+      desktopImage: cityscapesDesktopImg,
+      title: "Sunset Cityscapes",
+      author: "Benjamin Cruz",
+      buttonLink: "/stories",
+      buttonText: "READ STORY"
+    },
+    {
+      mobileImage: voyageMobileImg,
+      desktopImage: voyageDesktopImg,
+      title: "18 Days Voyage",
+      author: "Alexei Borodin",
+      buttonLink: "/stories",
+      buttonText: "READ STORY"
+    },
+    {
+      mobileImage: architecturalsMobileImg,
+      desktopImage: architecturalsDesktopImg,
+      title: "Architecturals",
+      author: "Samantha Brooks",
+      buttonLink: "/stories",
+      buttonText: "READ STORY"
+    }
+  ])
 
 
     return (
       <div className="home">
         <Header />
-        {cards.map((card) => 
-          <StoryCard card={card} />
+        {storyCards.map((storyCard) => 
+          <StoryCard card={storyCard} />
+        )}
+        {photoCards.map((photoCard) => 
+          <PhotoCard photoCard={photoCard} />
         )}
       </div>
     );

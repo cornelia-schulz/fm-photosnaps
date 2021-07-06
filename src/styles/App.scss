@@ -70,6 +70,7 @@ h4 {
 }
 
 .button-no-border-light {
+    color: $white;
     &:after {
         content: url('../assets/shared/desktop/arrow-light.svg');
     }
@@ -158,6 +159,19 @@ label {
 
 .story-card-content {
     padding: 7.2rem 2.4rem 7.2rem 3.3rem;
+    position: relative;
+}
+
+.highlight {
+    height: 0.6rem;
+    background-image: linear-gradient(to bottom left, $main-accent-1, $main-accent-2, $main-accent-3);
+    position: absolute;
+    top: -0.8rem;
+    width: 12.8rem;
+
+    &.hide {
+        display: none;
+    }
 }
 
 .story-card-content-intro {
@@ -168,4 +182,39 @@ label {
 
 .story-card-content-text {
     margin-bottom: 2.3rem;
+}
+
+.photo-card {
+    position: relative;
+}
+
+.photo-card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.gradient {
+    background-image: linear-gradient(to top, rgba($color: $black, $alpha: 0.7), transparent);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.photo-card-description {
+    bottom: 4rem;
+    color: $white;
+    left: 3.3rem;
+    position: absolute;
+    z-index: 4;
+}
+
+.photo-card-author {
+    border-bottom: 0.1rem solid rgba($color: $white, $alpha: 0.3);
+    font-size: 1.3rem;
+    line-height: 1.693rem;
+    margin-top: 0.4rem;
+    padding-bottom: 1.6rem;
+    width: 80%;
 }
