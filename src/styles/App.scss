@@ -81,6 +81,18 @@ h4 {
     }
 }
 
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-60 {
+    opacity: 0.6;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
 .header {
     padding: 1.5rem 1rem;
 }
@@ -198,17 +210,12 @@ label {
     margin-bottom: 2.4rem;
 }
 
-.story-card-content-date {
-    opacity: 0.75;
-}
-
 .story-card-content-author {
     margin-left: 1rem;
 }
 
 .story-card-content-text {
     margin-bottom: 2.3rem;
-    opacity: 0.6 ;
 }
 
 .photo-card {
@@ -245,7 +252,6 @@ label {
     line-height: 1.693rem;
     margin-bottom: 0.4rem;
     margin-top: 0.4rem;
-    opacity: 0.9;
     width: 80%;
 }
 
@@ -302,7 +308,6 @@ label {
 .copyright {
     line-height: 1.9rem;
     margin-top: 3.4rem;
-    opacity: 0.5;
 }
 
 .beta {
@@ -337,4 +342,45 @@ label {
     position: absolute;
     top: 0;
     width: 12.8rem;
+}
+
+.price-card {
+    background-color: $light-grey;
+    margin: 5.6rem 2.9rem;
+    padding: 5.6rem 2rem 4rem;
+    position: relative;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 18px;
+    }
+
+    .button {
+        height: 4rem;
+        margin-top: 4rem;
+        width: 24.5rem;
+    }
+}
+
+.price-card-dark {
+    background-color: $black;
+    color: $white;
+}
+
+.price-card-highlight {
+    height: 0.6rem;
+    background-image: linear-gradient(to bottom left, $main-accent-1, $main-accent-2, $main-accent-3);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.pricetag {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.417rem;
+    line-height: 4.8rem;
+    margin-bottom: 2.5rem;
+    margin-top: 4rem;
 }

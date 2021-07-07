@@ -25,7 +25,7 @@ function Footer() {
                 <li className="site-links"><Link to="/pricing">PRICING</Link></li>
             </ul>
             <button className="button button-no-border button-no-border-light">GET AN INVITE</button>
-            <p className="copyright">Copyright 2019. All Rights Reserved</p>
+            <p className="copyright opacity-50">Copyright 2019. All Rights Reserved</p>
         </footer>
     )
 }

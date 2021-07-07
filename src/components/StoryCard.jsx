@@ -24,7 +24,7 @@ function StoryCard({card}) {
           <p className="story-card-content-intro">{card.intro}</p>
           {card.date &&
             <p className="story-card-content-date-author">
-              <span className="story-card-content-date">
+              <span className="opacity-75">
                 {card.date}
               </span>
               <span className="story-card-content-author">
@@ -32,7 +32,7 @@ function StoryCard({card}) {
               </span>
             </p>
           }
-          <p className="story-card-content-text">{card.text}</p>
+          <p className="story-card-content-text opacity-60">{card.text}</p>
           {card.buttonText &&
             <button className={"button button-no-border " + (card.darkMode ? 'button-no-border-light' : '')}>
               <Link to={card.buttonLink}>{card.buttonText}</Link>
