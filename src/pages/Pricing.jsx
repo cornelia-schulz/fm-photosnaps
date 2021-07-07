@@ -10,6 +10,13 @@ import heroTabletImg from '../assets/pricing/tablet/hero.jpg'
 import heroDesktopImg from '../assets/pricing/desktop/hero.jpg'
 
 function Pricing() {
+  const [showYearly, setShowYearly] = useState(false)
+
+  const switchToggle = (e) => {
+    console.log('switch', e.target.checked)
+    setShowYearly(e.target.checked)
+  }
+
   const [storyCards] = useState([
     {
       intro: "PRICING",
@@ -25,22 +32,28 @@ function Pricing() {
     {
       title: "Basic",
       text: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-      price: "$19.00",
-      time: "per month",
+      monthlyPrice: "$19.00",
+      yearlyPrice: "$190.00",
+      monthly: "per month",
+      yearly: "per year",
       darkMode: false
     },
     {
       title: "Pro",
       text: "More advanced features available. Recommended for photography veterans and professionals.",
-      price: "$39.00",
-      time: "per month",
+      monthlyPrice: "$39.00",
+      yearlyPrice: "$390.00",
+      monthly: "per month",
+      yearly: "per year",
       darkMode: true
     },
     {
       title: "Business",
       text: "Additional features available such as more detailed metrics. Recommended for business owners.",
-      price: "$99.00",
-      time: "per month",
+      monthlyPrice: "$99.00",
+      yearlyPrice: "$990.00",
+      monthly: "per month",
+      yearly: "per year",
       darkMode: false
     }
   ])
@@ -102,8 +115,16 @@ function Pricing() {
       {storyCards.map((storyCard, index) =>
         <StoryCard card={storyCard} key={index} />
       )}
+      <div className="price-toggle-wrapper">
+      <p className="price-toggle-text">Monthly</p>
+        <label className="price-toggle">
+          <input className="price-toggle-input" type="checkbox" onChange={switchToggle} />
+          <span className="slider round" />
+        </label>
+        <p className="price-toggle-text">Yearly</p>
+      </div>
       {priceCards.map((priceCard, index) =>
-        <PriceCard priceCard={priceCard} key={index} />
+        <PriceCard priceCard={priceCard} key={index} showYearly={showYearly} />
       )}
       <Features features={features} />
       <Beta />

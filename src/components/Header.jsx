@@ -26,7 +26,7 @@ function Header() {
     <header className="header">
       <nav className="mobile-header">
         <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
-        <label htmlFor="menu-toggle">
+        <label className="menu-toggle" htmlFor="menu-toggle">
           <img className="toggle" src={menuImg} alt="Menu toggle" />
         </label>
         <input type="checkbox" id="menu-toggle" onClick={toggleMenu}/>
