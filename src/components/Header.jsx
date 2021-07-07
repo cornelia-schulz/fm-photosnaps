@@ -45,6 +45,25 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <nav className="large-header">
+        <ul className="large-menu">
+          <li>
+            <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
+          </li>
+          <li className="large-menu-items">
+            <Link className="menu-link" to="/stories">STORIES</Link>
+          </li>
+          <li className="large-menu-items">
+            <Link className="menu-link" to="/features">FEATURES</Link>
+          </li>
+          <li className="large-menu-items">
+            <Link className="menu-link" to="/pricing">PRICING</Link>
+          </li>
+          <li className="menu-button">
+            <button className="button button-dark">GET AN INVITE</button>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

@@ -104,6 +104,20 @@ h4 {
     justify-content: space-between;
 }
 
+.large-header {
+    display: none;
+}
+
+.large-menu-items {
+    .menu-link {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        line-height: 1.562rem;
+        text-decoration: none;
+    }
+}
+
 #menu-toggle {
     display: none;
 }
@@ -163,6 +177,13 @@ h4 {
   
 #menu-toggle:checked + #menu {
     max-height: 100%;
+}
+
+.large-menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6rem 4rem;
 }
 
 .story-card-dark {
@@ -486,4 +507,19 @@ h4 {
     img {
         margin-top: 0.8rem;
     }
+}
+
+@media only screen and (min-width: 768px) {
+    .button {
+        height: 4rem;
+        width: 15.8rem;
+    }
+    .mobile-header {
+        display: none;
+    }
+
+    .large-header {
+        display: block;
+    }
+
 }

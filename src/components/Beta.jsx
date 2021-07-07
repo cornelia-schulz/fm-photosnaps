@@ -10,9 +10,8 @@ function Beta() {
                 srcSet={`${betaMobile} 375w,
                          ${betaTablet} 768w,
                          ${betaDesktop} 1440w`}
-                sizes="(max-width 600px) 375px,
-                        (max-width 768px) 768px,
-                        1440px"
+                sizes="(max-width: 600px) 375px,
+                        (max-width: 768px) 768px"
                 src={betaMobile}
                 alt="we are in beta"
                 loading="lazy"

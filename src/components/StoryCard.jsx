@@ -9,8 +9,8 @@ function StoryCard({card}) {
           srcSet={`${card.imageMobile} 375w,
                    ${card.imageTablet} 273w,
                    ${card.imageDesktop} 830w`}
-          sizes="(max-width 600px) 375px,
-                (max-width 768px) 273px,
+          sizes="(max-width: 500px) 100vw,
+                (max-width: 768px) 25vw,
                 830px"
           src={card.mobileImg}
           alt="create and share"
