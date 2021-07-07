@@ -384,3 +384,34 @@ label {
     margin-bottom: 2.5rem;
     margin-top: 4rem;
 }
+
+.features {
+    margin: 6.4rem 3.3rem;
+
+    .features-header {
+        border-bottom: 1px solid $black;
+        padding-bottom: 2.3rem;
+    }
+}
+
+.feature-card {
+    border-bottom: 0.1rem solid $light-grey;
+    padding-bottom: 2.3rem;
+    padding-top: 2.4rem;
+}
+
+.version-wrapper {
+    display: flex;
+}
+
+.version {
+    font-size: 1rem;
+    letter-spacing: 0.167rem;
+    line-height: 1.302rem;
+    margin-right: 7rem;
+    margin-top: 1.65rem;
+
+    img {
+        margin-top: 0.8rem;
+    }
+}

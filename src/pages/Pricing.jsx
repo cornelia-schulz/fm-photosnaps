@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from '../components/Header'
 import StoryCard from '../components/StoryCard'
 import PriceCard from '../components/PriceCard'
+import Features from '../components/Features'
 import Beta from '../components/Beta'
 import Footer from '../components/Footer'
 import heroMobileImg from '../assets/pricing/mobile/hero.jpg'
@@ -44,6 +45,57 @@ function Pricing() {
     }
   ])
 
+  const [features] = useState([
+    {
+      name: "UNLIMITED STORY POSTING",
+      basic: true,
+      pro: true,
+      business: true
+    },
+    {
+      name: "UNLIMITED PHOTO UPLOAD",
+      basic: true,
+      pro: true,
+      business: true
+    },
+    {
+      name: "EMBEDDING CUSTOM CONTENT",
+      basic: false,
+      pro: true,
+      business: true
+    },
+    {
+      name: "CUSTOMIZE METADATA",
+      basic: false,
+      pro: true,
+      business: true
+    },
+    {
+      name: "ADVANCED METRICS",
+      basic: false,
+      pro: false,
+      business: true
+    },
+    {
+      name: "PHOTO DOWNLOADS",
+      basic: false,
+      pro: false,
+      business: true
+    },
+    {
+      name: "SEARCH ENGINE INDEXING",
+      basic: false,
+      pro: false,
+      business: true
+    },
+    {
+      name: "CUSTOM ANALYTICS",
+      basic: false,
+      pro: false,
+      business: true
+    }
+  ])
+
   return (
     <div className="pricing">
       <Header />
@@ -53,6 +105,7 @@ function Pricing() {
       {priceCards.map((priceCard, index) =>
         <PriceCard priceCard={priceCard} key={index} />
       )}
+      <Features features={features} />
       <Beta />
       <Footer />
     </div>
