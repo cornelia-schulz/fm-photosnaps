@@ -116,11 +116,13 @@ function Home() {
       <div className="home">
         <Header />
         {storyCards.map((storyCard, index) => 
-          <StoryCard card={storyCard} key={index} />
+          <StoryCard card={storyCard} index={index} key={index} />
         )}
-        {photoCards.map((photoCard, index) => 
-          <PhotoCard photoCard={photoCard} key={index} />
-        )}
+        <div className="photo-cards">
+          {photoCards.map((photoCard, index) => 
+            <PhotoCard photoCard={photoCard} key={index} />
+          )}
+        </div>
         {infoCards.map((infoCard, index) => 
           <InfoCard infoCard={infoCard} key={index} />
         )}

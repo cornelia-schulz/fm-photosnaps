@@ -1,21 +1,36 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useWindowSize } from '../hooks/useWindowSize'
 
-function StoryCard({card}) {
+function StoryCard({card, index}) {
+
+  const windowSize = useWindowSize()
+  const [showImage, setShowImage] = useState(false)
+  const [image, setImage] = useState(card.imageMobile)
+
+  useEffect(() => {
+    if (windowSize.width < 768) {
+      setShowImage(true)
+      setImage(card.imageMobile)
+    } else if (windowSize.width > 767 && windowSize.width < 1000) {
+      setShowImage(index%2 !== 0)
+      setImage(card.imageTablet)
+    } else if (windowSize.width > 999) {
+      setImage(card.imageDesktop)
+    }
+  }, [windowSize, index, card.imageDesktop, card.imageMobile, card.imageTablet])
+
+  
 
   return (
       <div className={"story-card " + (card.darkMode ? 'story-card-dark' : 'story-card-light')}>
+        {showImage &&
         <img
           className="story-card-img"
-          srcSet={`${card.imageMobile} 375w,
-                   ${card.imageTablet} 273w,
-                   ${card.imageDesktop} 830w`}
-          sizes="(max-width: 500px) 100vw,
-                (max-width: 768px) 25vw,
-                830px"
-          src={card.mobileImg}
-          alt="create and share"
+          src={image}
+          alt={index}
           loading="lazy"
-        />
+        />}
         <div className="story-card-content">
           {card.tagline &&
             <p className="story-card-content-tagline">{card.tagline}</p>
@@ -39,6 +54,13 @@ function StoryCard({card}) {
             </button>
           }
         </div>
+        {windowSize.width > 767 && !showImage &&
+        <img
+          className="story-card-img"
+          src={image}
+          alt={index}
+          loading="lazy"
+        />}
       </div>
   )
 }
