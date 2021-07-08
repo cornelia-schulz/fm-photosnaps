@@ -13,7 +13,6 @@ function Pricing() {
   const [showYearly, setShowYearly] = useState(false)
 
   const switchToggle = (e) => {
-    console.log('switch', e.target.checked)
     setShowYearly(e.target.checked)
   }
 
@@ -113,15 +112,15 @@ function Pricing() {
     <div className="pricing">
       <Header />
       {storyCards.map((storyCard, index) =>
-        <StoryCard card={storyCard} key={index} />
+        <StoryCard card={storyCard} index={index} key={index} />
       )}
       <div className="price-toggle-wrapper">
-      <p className="price-toggle-text">Monthly</p>
+      <p className={"price-toggle-text " + (showYearly ? 'font-normal' : 'font-bold')}>Monthly</p>
         <label className="price-toggle">
           <input className="price-toggle-input" type="checkbox" onChange={switchToggle} />
           <span className="slider round" />
         </label>
-        <p className="price-toggle-text">Yearly</p>
+        <p className={"price-toggle-text " + (showYearly ? 'font-bold' : 'font-normal')}>Yearly</p>
       </div>
       {priceCards.map((priceCard, index) =>
         <PriceCard priceCard={priceCard} key={index} showYearly={showYearly} />

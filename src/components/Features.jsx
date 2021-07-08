@@ -3,7 +3,15 @@ import FeatureCard from "./FeatureCard"
 function Features({features}) {
 return (
   <div className="features-wrapper">
-    <h4 className="features-header">THE FEATURES</h4>
+    <h1 className="large-only">COMPARE</h1>
+    <div className="feature-headers">
+      <h4 className="features-header">THE FEATURES</h4>
+      <div className="version-headers">
+        <h4 className="feature-header large-only">BASIC</h4>
+        <h4 className="feature-header large-only">PRO</h4>
+        <h4 className="feature-header large-only">BUSINESS</h4>
+      </div>
+    </div>
     {features.map((feature, index) =>
       <FeatureCard featureCard={feature} key={index} />
     )}

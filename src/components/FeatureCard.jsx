@@ -3,24 +3,24 @@ import check from '../assets/pricing/desktop/check.svg'
 function FeatureCard({featureCard}) {
     return (
         <div className="feature-card">
-            <h4>{featureCard.name}</h4>
+            <h4 className="feature-name">{featureCard.name}</h4>
             <div className="version-wrapper">
                 <div className="version">
-                    <p>BASIC</p>
+                    <p className="mobile-only">BASIC</p>
                     {featureCard.basic &&
-                        <img src={check} alt="tick" />
+                        <div><img src={check} alt="tick" /></div>
                     }
                 </div>
                 <div className="version">
-                <p>PRO</p>
+                <p className="mobile-only">PRO</p>
                     {featureCard.pro &&
-                        <img src={check} alt="tick" />
+                        <div><img src={check} alt="tick" /></div>
                     }
                 </div>
                 <div className="version">
-                <p>BUSINESS</p>
+                <p className="mobile-only">BUSINESS</p>
                     {featureCard.business &&
-                        <img src={check} alt="tick" />
+                        <div><img src={check} alt="tick" /></div>
                     }
                 </div>
             </div>

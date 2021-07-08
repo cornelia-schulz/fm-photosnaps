@@ -15,17 +15,24 @@ function PriceCard({priceCard, showYearly}) {
     }, [showYearly, priceCard.monthly, priceCard.monthlyPrice, priceCard.yearly, priceCard.yearlyPrice])
 
     return (
-        <div className={"price-card " + (priceCard.darkMode ? 'price-card-dark' : '')}>
-            {priceCard.darkMode &&
-                <div className="price-card-highlight" />
-            }
-            <h2>{priceCard.title}</h2>
-            <p  className="opacity-60">{priceCard.text}</p>
+      <div className={"price-card " + (priceCard.darkMode ? 'price-card-dark' : '')}>
+        {priceCard.darkMode &&
+          <div className="price-card-highlight" />
+        }
+        <div className="price-card-content">
+          <h2>{priceCard.title}</h2>
+          <p  className="opacity-60">{priceCard.text}</p>
+          <div className="price-card-price-wrapper mobile-only">
             <p className="pricetag">{price}</p>
-            {showYearly}
             <p className="opacity-60">{time}</p>
-            <button className={"button " + (priceCard.darkMode ? '' : 'button-dark')}>PICK PLAN</button>
+          </div>
+          <button className={"button " + (priceCard.darkMode ? '' : 'button-dark')}>PICK PLAN</button>
         </div>
+        <div className="price-card-price-wrapper large-only">
+          <p className="pricetag">{price}</p>
+          <p className="opacity-60">{time}</p>
+        </div>
+      </div>
     )
 }
 
