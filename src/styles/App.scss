@@ -488,7 +488,7 @@ h4 {
     margin-top: 4rem;
 }
 
-.features {
+.features-wrapper {
     margin: 6.4rem 3.3rem;
 
     .features-header {
@@ -564,19 +564,32 @@ h4 {
         margin-bottom: 4.8rem;
     }
 
-    .photo-cards {
+    .info-card {
+        margin: 12rem auto;
+        max-width: 45.7rem;
+    }
+
+    .photo-cards, .info-cards {
         display: flex;
         flex-grow: 1;
         flex-wrap: wrap;
+
+        .info-card {
+            flex-basis: 50%;
+            margin: 7.2rem 0 0 0;
+        }
+    }
+
+    .info-cards {
+        margin: 11.2rem 3.8rem 11.2rem 1.1rem;
+    }
+
+    .info-card-img {
+        height: 7.2rem;
     }
 
     .photo-card {
         flex-basis: 50%;
-    }
-
-    .info-card {
-        margin: 12rem auto;
-        max-width: 45.7rem;
     }
 
     .footer-mobile {
@@ -601,5 +614,15 @@ h4 {
 
     .social-media-icons-wrapper {
         margin-left: 0;
+
+        a {
+            margin-right: 1.3rem;
+        }
+    }
+
+    .absolute {
+        max-width: 65%;
+        padding-top: 12.2rem;
+        position: absolute;
     }
 }

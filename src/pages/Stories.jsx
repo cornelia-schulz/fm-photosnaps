@@ -52,7 +52,8 @@ function Stories() {
       buttonLink: "/stories",
       darkMode: true,
       date: "March 2nd 2020",
-      author: "John Appleseed"
+      author: "John Appleseed",
+      storiesPage: true
     }
   ])
 
@@ -207,11 +208,13 @@ function Stories() {
       <div className="stories">
         <Header />
         {storyCards.map((storyCard, index) => 
-          <StoryCard card={storyCard} key={index} />
+          <StoryCard card={storyCard} index={index + 1} key={index} />
         )}
-        {photoCards.map((photoCard, index) => 
-          <PhotoCard photoCard={photoCard} key={index} />
-        )}
+        <div className="photo-cards">
+          {photoCards.map((photoCard, index) => 
+            <PhotoCard photoCard={photoCard} key={index} />
+          )}
+        </div>
         <Footer />
       </div>
     );

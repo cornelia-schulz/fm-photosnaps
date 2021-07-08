@@ -31,7 +31,7 @@ function StoryCard({card, index}) {
           alt={index}
           loading="lazy"
         />}
-        <div className="story-card-content">
+        <div className={"story-card-content " + (card.storiesPage ? 'absolute' : '')}>
           {card.tagline &&
             <p className="story-card-content-tagline">{card.tagline}</p>
           }

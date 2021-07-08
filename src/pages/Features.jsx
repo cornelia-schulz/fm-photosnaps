@@ -62,11 +62,13 @@ function Features() {
     <div className="features">
       <Header />
       {storyCards.map((storyCard, index) =>
-        <StoryCard card={storyCard} key={index} />
+        <StoryCard card={storyCard} index={index} key={index} />
       )}
-      {infoCards.map((infoCard, index) =>
-        <InfoCard infoCard={infoCard} key={index} />
-      )}
+      <div className="info-cards">
+        {infoCards.map((infoCard, index) =>
+          <InfoCard infoCard={infoCard} key={index} />
+        )}
+      </div>
       <Beta />
       <Footer />
     </div>
