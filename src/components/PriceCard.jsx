@@ -21,14 +21,14 @@ function PriceCard({priceCard, showYearly}) {
         }
         <div className="price-card-content">
           <h2>{priceCard.title}</h2>
-          <p  className="opacity-60">{priceCard.text}</p>
-          <div className="price-card-price-wrapper mobile-only">
+          <p  className="price-card-text opacity-60">{priceCard.text}</p>
+          <div className="price-card-price-wrapper mobile-only large-only">
             <p className="pricetag">{price}</p>
             <p className="opacity-60">{time}</p>
           </div>
           <button className={"button " + (priceCard.darkMode ? '' : 'button-dark')}>PICK PLAN</button>
         </div>
-        <div className="price-card-price-wrapper large-only">
+        <div className="price-card-price-wrapper tablet-only">
           <p className="pricetag">{price}</p>
           <p className="opacity-60">{time}</p>
         </div>

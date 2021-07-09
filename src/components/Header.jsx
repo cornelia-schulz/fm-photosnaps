@@ -50,13 +50,24 @@ function Header() {
           <li>
             <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
           </li>
-          <li className="large-menu-items">
+          <ul className="large-menu-items-wrapper">
+            <li className="large-menu-items">
+              <Link className="menu-link" to="/stories">STORIES</Link>
+            </li>
+            <li className="large-menu-items">
+              <Link className="menu-link" to="/features">FEATURES</Link>
+            </li>
+            <li className="large-menu-items">
+              <Link className="menu-link" to="/pricing">PRICING</Link>
+            </li>
+          </ul>
+          <li className="tablet-menu-items">
             <Link className="menu-link" to="/stories">STORIES</Link>
           </li>
-          <li className="large-menu-items">
+          <li className="tablet-menu-items">
             <Link className="menu-link" to="/features">FEATURES</Link>
           </li>
-          <li className="large-menu-items">
+          <li className="tablet-menu-items">
             <Link className="menu-link" to="/pricing">PRICING</Link>
           </li>
           <li className="menu-button">

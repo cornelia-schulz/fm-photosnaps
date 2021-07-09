@@ -29,7 +29,7 @@ function Home() {
 
   const [storyCards] = useState([
     {
-      intro: "CREATE AND SHARE YOUR PHOTO STORIES",
+      intro: "CREATE AND SHARE YOUR PHOTO STORIES. ",
       text: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
       imageMobile: createMobileImg,
       imageTablet: createTabletImg,
@@ -123,9 +123,11 @@ function Home() {
             <PhotoCard photoCard={photoCard} key={index} />
           )}
         </div>
-        {infoCards.map((infoCard, index) => 
-          <InfoCard infoCard={infoCard} key={index} />
-        )}
+        <div className="home-info-cards">
+          {infoCards.map((infoCard, index) => 
+            <InfoCard infoCard={infoCard} key={index} />
+          )}
+        </div>
         <Footer />
       </div>
     );

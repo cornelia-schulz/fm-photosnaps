@@ -122,9 +122,11 @@ function Pricing() {
         </label>
         <p className={"price-toggle-text " + (showYearly ? 'font-bold' : 'font-normal')}>Yearly</p>
       </div>
-      {priceCards.map((priceCard, index) =>
-        <PriceCard priceCard={priceCard} key={index} showYearly={showYearly} />
-      )}
+      <div className="price-cards">
+        {priceCards.map((priceCard, index) =>
+          <PriceCard priceCard={priceCard} key={index} showYearly={showYearly} />
+        )}
+      </div>
       <Features features={features} />
       <Beta />
       <Footer />

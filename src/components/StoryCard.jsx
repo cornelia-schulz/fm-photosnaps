@@ -17,6 +17,7 @@ function StoryCard({card, index}) {
       setImage(card.imageTablet)
     } else if (windowSize.width > 999) {
       setImage(card.imageDesktop)
+      setShowImage(index%2 !== 0)
     }
   }, [windowSize, index, card.imageDesktop, card.imageMobile, card.imageTablet])
 
