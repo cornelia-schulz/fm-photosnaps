@@ -207,17 +207,19 @@ function Stories() {
     return (
       <div className="stories">
         <Header />
-        {storyCards.map((storyCard, index) => 
-          <StoryCard card={storyCard} index={index + 1} key={index} />
-        )}
-        <div className="photo-cards">
-          {photoCards.map((photoCard, index) => 
-            <PhotoCard photoCard={photoCard} key={index} />
+        <main>
+          {storyCards.map((storyCard, index) => 
+            <StoryCard card={storyCard} index={index + 1} key={index} />
           )}
-        </div>
+          <div className="photo-cards">
+            {photoCards.map((photoCard, index) => 
+              <PhotoCard photoCard={photoCard} key={index} />
+            )}
+          </div>
+        </main>
         <Footer />
       </div>
-    );
+    )
   }
   
   export default Stories

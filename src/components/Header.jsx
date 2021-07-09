@@ -76,7 +76,7 @@ function Header() {
         </ul>
       </nav>
     </header>
-  );
+  )
 }
 
 export default Header

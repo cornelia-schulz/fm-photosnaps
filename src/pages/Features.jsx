@@ -61,18 +61,20 @@ function Features() {
   return (
     <div className="features">
       <Header />
-      {storyCards.map((storyCard, index) =>
-        <StoryCard card={storyCard} index={index} key={index} />
-      )}
-      <div className="info-cards">
-        {infoCards.map((infoCard, index) =>
-          <InfoCard infoCard={infoCard} key={index} />
+      <main>
+        {storyCards.map((storyCard, index) =>
+          <StoryCard card={storyCard} index={index} key={index} />
         )}
-      </div>
-      <Beta />
+        <div className="info-cards">
+          {infoCards.map((infoCard, index) =>
+            <InfoCard infoCard={infoCard} key={index} />
+          )}
+        </div>
+        <Beta />
+      </main>
       <Footer />
     </div>
-  );
+  )
 }
   
-  export default Features;
+  export default Features

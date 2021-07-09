@@ -111,27 +111,29 @@ function Pricing() {
   return (
     <div className="pricing">
       <Header />
-      {storyCards.map((storyCard, index) =>
-        <StoryCard card={storyCard} index={index} key={index} />
-      )}
-      <div className="price-toggle-wrapper">
-      <p className={"price-toggle-text " + (showYearly ? 'font-normal' : 'font-bold')}>Monthly</p>
-        <label className="price-toggle">
-          <input className="price-toggle-input" type="checkbox" onChange={switchToggle} />
-          <span className="slider round" />
-        </label>
-        <p className={"price-toggle-text " + (showYearly ? 'font-bold' : 'font-normal')}>Yearly</p>
-      </div>
-      <div className="price-cards">
-        {priceCards.map((priceCard, index) =>
-          <PriceCard priceCard={priceCard} key={index} showYearly={showYearly} />
+      <main>
+        {storyCards.map((storyCard, index) =>
+          <StoryCard card={storyCard} index={index} key={index} />
         )}
-      </div>
-      <Features features={features} />
-      <Beta />
+        <div className="price-toggle-wrapper">
+        <p className={"price-toggle-text " + (showYearly ? 'font-normal' : 'font-bold')}>Monthly</p>
+          <label className="price-toggle">
+            <input className="price-toggle-input" type="checkbox" onChange={switchToggle} />
+            <span className="slider round" />
+          </label>
+          <p className={"price-toggle-text " + (showYearly ? 'font-bold' : 'font-normal')}>Yearly</p>
+        </div>
+        <div className="price-cards">
+          {priceCards.map((priceCard, index) =>
+            <PriceCard priceCard={priceCard} key={index} showYearly={showYearly} />
+          )}
+        </div>
+        <Features features={features} />
+        <Beta />
+      </main>
       <Footer />
     </div>
-  );
+  )
 }
   
-  export default Pricing;
+  export default Pricing

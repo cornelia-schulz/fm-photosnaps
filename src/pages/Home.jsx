@@ -118,19 +118,22 @@ function Home() {
         {storyCards.map((storyCard, index) => 
           <StoryCard card={storyCard} index={index} key={index} />
         )}
-        <div className="photo-cards">
-          {photoCards.map((photoCard, index) => 
-            <PhotoCard photoCard={photoCard} key={index} />
-          )}
-        </div>
-        <div className="home-info-cards">
-          {infoCards.map((infoCard, index) => 
-            <InfoCard infoCard={infoCard} key={index} />
-          )}
-        </div>
+        <main>
+          <h1 className="sr-only">Photosnaps Photo Sharing</h1>
+          <div className="photo-cards">
+            {photoCards.map((photoCard, index) => 
+              <PhotoCard photoCard={photoCard} key={index} />
+            )}
+          </div>
+          <div className="home-info-cards">
+            {infoCards.map((infoCard, index) => 
+              <InfoCard infoCard={infoCard} key={index} />
+            )}
+          </div>
+        </main>
         <Footer />
       </div>
-    );
+    )
   }
   
   export default Home
