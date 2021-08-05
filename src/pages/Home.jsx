@@ -118,7 +118,7 @@ function Home() {
         {storyCards.map((storyCard, index) => 
           <StoryCard card={storyCard} index={index} key={index} />
         )}
-        <main>
+        <main role="main">
           <h1 className="sr-only">Photosnaps Photo Sharing</h1>
           <div className="photo-cards">
             {photoCards.map((photoCard, index) => 

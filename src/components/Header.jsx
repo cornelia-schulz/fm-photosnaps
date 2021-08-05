@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <header className="header">
-      <nav className="mobile-header">
+      <nav className="mobile-header" role="navigation">
         <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
         <label className="menu-toggle" htmlFor="menu-toggle">
           <img className="toggle" src={menuImg} alt="Menu toggle" />
@@ -45,22 +45,24 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <nav className="large-header">
+      <nav className="large-header" role="navigation">
         <ul className="large-menu">
           <li>
             <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
           </li>
-          <ul className="large-menu-items-wrapper">
-            <li className="large-menu-items">
-              <Link className="menu-link" to="/stories">STORIES</Link>
-            </li>
-            <li className="large-menu-items">
-              <Link className="menu-link" to="/features">FEATURES</Link>
-            </li>
-            <li className="large-menu-items">
-              <Link className="menu-link" to="/pricing">PRICING</Link>
-            </li>
-          </ul>
+          <li className="sub-menu">
+            <ul className="large-menu-items-wrapper">
+              <li className="large-menu-items">
+                <Link className="menu-link" to="/stories">STORIES</Link>
+              </li>
+              <li className="large-menu-items">
+                <Link className="menu-link" to="/features">FEATURES</Link>
+              </li>
+              <li className="large-menu-items">
+                <Link className="menu-link" to="/pricing">PRICING</Link>
+              </li>
+            </ul>
+          </li>
           <li className="tablet-menu-items">
             <Link className="menu-link" to="/stories">STORIES</Link>
           </li>

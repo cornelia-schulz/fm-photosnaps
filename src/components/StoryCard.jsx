@@ -30,7 +30,6 @@ function StoryCard({card, index}) {
           className="story-card-img"
           src={image}
           alt={index}
-          loading="lazy"
         />}
         <div className={"story-card-content " + (card.storiesPage ? 'absolute' : '')}>
           {card.tagline &&
@@ -50,9 +49,9 @@ function StoryCard({card, index}) {
           }
           <p className="story-card-content-text opacity-60">{card.text}</p>
           {card.buttonText &&
-            <button className={"button button-no-border " + (card.darkMode ? 'button-no-border-light' : '')}>
+            <div className={"button button-no-border " + (card.darkMode ? 'button-no-border-light' : '')}>
               <Link to={card.buttonLink}>{card.buttonText}</Link>
-            </button>
+            </div>
           }
         </div>
         {windowSize.width > 767 && !showImage &&

@@ -10,7 +10,7 @@ import { Fragment } from 'react'
 function Footer() {
     return (
         <Fragment>
-          <footer className="footer footer-mobile">
+          <footer className="footer footer-mobile" role="contentinfo">
             <Logo fill="white" className="footer-logo" />
             <div className="social-media-icons-wrapper">
                 <Link to=""><Facebook fill="white" /></Link>
@@ -20,7 +20,7 @@ function Footer() {
                 <Link to=""><Instagram fill="white" /></Link>
             </div>
             <ul className="site-links-list">
-                <li className="site-links"><Link to="/">HOME</Link></li>
+                <li className="site-links"><Link to="/" aria-label="Return to the Homepage">HOME</Link></li>
                 <li className="site-links"><Link to="/stories">STORIES</Link></li>
                 <li className="site-links"><Link to="/features">FEATURES</Link></li>
                 <li className="site-links"><Link to="/pricing">PRICING</Link></li>
@@ -29,12 +29,12 @@ function Footer() {
             <p className="copyright opacity-50">Copyright 2019. All Rights Reserved</p>
           </footer>
           
-          <footer className="footer footer-large">
+          <footer className="footer footer-large" role="contentinfo">
             <div className="logo-wrapper">
               <div className="logo-site-links-wrapper">
                 <Logo fill="white" className="footer-logo" />
                 <ul className="site-links-list-large">
-                  <li className="site-links"><Link to="/">HOME</Link></li>
+                  <li className="site-links"><Link to="/" aria-label="Return to the Homepage">HOME</Link></li>
                   <li className="site-links"><Link to="/stories">STORIES</Link></li>
                   <li className="site-links"><Link to="/features">FEATURES</Link></li>
                   <li className="site-links"><Link to="/pricing">PRICING</Link></li>
@@ -43,7 +43,7 @@ function Footer() {
               <button className="button button-no-border button-no-border-light">GET AN INVITE</button>
             </div>
               <ul className="site-links-list">
-                <li className="site-links"><Link to="/">HOME</Link></li>
+                <li className="site-links"><Link to="/" aria-label="Return to the Homepage">HOME</Link></li>
                 <li className="site-links"><Link to="/stories">STORIES</Link></li>
                 <li className="site-links"><Link to="/features">FEATURES</Link></li>
                 <li className="site-links"><Link to="/pricing">PRICING</Link></li>

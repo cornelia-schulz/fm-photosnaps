@@ -61,7 +61,7 @@ function Features() {
   return (
     <div className="features">
       <Header />
-      <main>
+      <main role="main">
         {storyCards.map((storyCard, index) =>
           <StoryCard card={storyCard} index={index} key={index} />
         )}
