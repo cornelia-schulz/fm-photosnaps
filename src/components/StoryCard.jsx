@@ -59,7 +59,6 @@ function StoryCard({card, index}) {
           className="story-card-img"
           src={image}
           alt={index}
-          loading="lazy"
         />}
       </div>
   )

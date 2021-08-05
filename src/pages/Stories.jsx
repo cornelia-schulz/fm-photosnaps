@@ -207,7 +207,7 @@ function Stories() {
     return (
       <div className="stories">
         <Header />
-        <main role="main">
+        <main>
           {storyCards.map((storyCard, index) => 
             <StoryCard card={storyCard} index={index + 1} key={index} />
           )}

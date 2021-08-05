@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <header className="header">
-      <nav className="mobile-header" role="navigation">
+      <nav className="mobile-header">
         <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
         <label className="menu-toggle" htmlFor="menu-toggle">
           <img className="toggle" src={menuImg} alt="Menu toggle" />
@@ -45,7 +45,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <nav className="large-header" role="navigation">
+      <nav className="large-header">
         <ul className="large-menu">
           <li>
             <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>

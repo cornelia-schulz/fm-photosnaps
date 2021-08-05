@@ -111,7 +111,7 @@ function Pricing() {
   return (
     <div className="pricing">
       <Header />
-      <main role="main">
+      <main>
         {storyCards.map((storyCard, index) =>
           <StoryCard card={storyCard} index={index} key={index} />
         )}
