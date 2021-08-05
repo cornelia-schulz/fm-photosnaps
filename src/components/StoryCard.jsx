@@ -24,12 +24,12 @@ function StoryCard({card, index}) {
   
 
   return (
-      <div className={"story-card " + (card.darkMode ? 'story-card-dark' : 'story-card-light')}>
+      <div className={"story-card " + (card.darkMode ? 'story-card-dark' : 'story-card-light')} role="contentinfo">
         {showImage &&
         <img
           className="story-card-img"
           src={image}
-          alt={index}
+          alt={card.intro}
         />}
         <div className={"story-card-content " + (card.storiesPage ? 'absolute' : '')}>
           {card.tagline &&
@@ -58,7 +58,7 @@ function StoryCard({card, index}) {
         <img
           className="story-card-img"
           src={image}
-          alt={index}
+          alt={card.intro}
         />}
       </div>
   )

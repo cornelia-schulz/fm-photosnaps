@@ -24,7 +24,7 @@ function PhotoCard({ photoCard }) {
       <div className="gradient" />
       <div className="photo-card-description">
         {photoCard.date && <p className="photo-card-date"> {photoCard.date}</p>}
-        <h3 className="photo-card-title">{photoCard.title}</h3>
+        <h2 className="h2-small photo-card-title">{photoCard.title}</h2>
         <p className="photo-card-author">by {photoCard.author}</p>
         <div className="button button-no-border button-no-border-light">
           <Link to={photoCard.buttonLink}>{photoCard.buttonText}</Link>
