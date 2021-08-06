@@ -25,11 +25,29 @@ function StoryCard({card, index}) {
 
   return (
       <div className={"story-card " + (card.darkMode ? 'story-card-dark' : 'story-card-light')} role="contentinfo">
-        {showImage &&
+        {showImage && windowSize.width < 768 &&
         <img
           className="story-card-img"
           src={image}
           alt={card.intro}
+          height="294"
+          width="375"
+        />}
+        {showImage && windowSize.width > 999 &&
+        <img
+          className="story-card-img"
+          src={image}
+          alt={card.intro}
+          width="830"
+          height="680"
+        />}
+        {showImage && windowSize.width > 767 && windowSize.width < 1000 &&
+        <img
+          className="story-card-img"
+          src={image}
+          alt={card.intro}
+          width="295"
+          height="680"
         />}
         <div className={"story-card-content " + (card.storiesPage ? 'absolute' : '')}>
           {card.tagline &&
@@ -54,7 +72,15 @@ function StoryCard({card, index}) {
             </div>
           }
         </div>
-        {windowSize.width > 767 && !showImage &&
+        {!showImage && windowSize.width > 767 && windowSize.width < 1000 &&
+        <img
+          className="story-card-img"
+          src={image}
+          alt={card.intro}
+          width="295"
+          height="680"
+        />}
+        {windowSize.width > 999 && !showImage &&
         <img
           className="story-card-img"
           src={image}
