@@ -59,6 +59,8 @@ function StoryCard({card, index}) {
           className="story-card-img"
           src={image}
           alt={card.intro}
+          width="830"
+          height="680"
         />}
       </div>
   )
