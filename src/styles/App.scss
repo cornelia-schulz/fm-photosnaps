@@ -771,8 +771,13 @@ h4 {
     
     .large-menu {
         padding: 1.6rem 16.5rem;
+
+        .button-dark {
+            padding-left: 1.4rem;
+            padding-right: 1.4rem;
+        }
     }
-    
+
     .photo-card {
         flex-basis: 25%;
     }
